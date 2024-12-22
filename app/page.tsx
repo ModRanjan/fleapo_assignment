@@ -1,95 +1,151 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { COURCES } from '@/utils/data';
+// import {
+//   ChevronRight,
+//   Download,
+//   Eye,
+//   Heart,
+//   ShoppingCart,
+//   Star,
+// } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    // <section className='courses-section'>
+    //   <div className='header'>
+    //     <h1>Most Popular Courses</h1>
+    //     <p>
+    //       Problems trying to resolve the conflict between the two major realms
+    //       of Classical physics: Newtonian mechanics
+    //     </p>
+    //   </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    //   <div className='course-grid'>
+    //     {COURCES.map((course) => (
+    //       <article key={course.id} className='course-card'>
+    //         <div className='card-image'>
+    //           <img src={course.image} alt={course.title} />
+    //           <h6 className='sale-badge'>Sale</h6>
+    //           <div className='action-buttons'>
+    //             <button aria-label='Like course' className='gradient_1'>
+    //               <Heart size={20} />
+    //             </button>
+    //             <button aria-label='Add to cart' className='gradient_2'>
+    //               <ShoppingCart size={20} />
+    //             </button>
+    //             <button aria-label='Share course' className='gradient_3'>
+    //               <Eye size={20} />
+    //             </button>
+    //           </div>
+    //         </div>
+
+    //         <div className='card-content'>
+    //           <div className='category'>
+    //             <a className='category_title'>{course.category}</a>
+    //             <div className='rating'>
+    //               <Star size={16} fill='currentColor' />
+    //               <span>{course.rating}</span>
+    //             </div>
+    //           </div>
+
+    //           <h5>{course.title}</h5>
+    //           <p>{course.description}</p>
+
+    //           <h6 className='meta'>
+    //             <Download size={16} /> <span>{course.sales} Sales</span>
+    //           </h6>
+
+    //           <h5 className='price'>
+    //             <span className='original'>${course.originalPrice}</span>
+    //             <span className='discounted'>${course.discountedPrice}</span>
+    //           </h5>
+
+    //           <a href='#' className='learn-more'>
+    //             <h6>Learn More</h6>
+    //             <ChevronRight size={16} />
+    //           </a>
+    //         </div>
+    //       </article>
+    //     ))}
+    //   </div>
+    // </section>
+
+    <section className='popular-course-sec'>
+      <div className='container-fluid'>
+        <div className='sec-title'>
+          <span className='sub-title'>Courses</span>
+          <h2>Most Popular Courses</h2>
+          <p>Problems trying to resolve the conflict between</p>
+          <p>the two major realms of Classical physics: Newtonian mechanics </p>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className='popular-course-wpr'>
+          <div className='popular-course-slider'>
+            {COURCES.map((cource) => {
+              return (
+                <div className='course-item' key={cource.id}>
+                  <div className='course-card'>
+                    <figure>
+                      <img src={cource.image} alt={cource.title} />
+                      <ul className='wishlist-wpr'>
+                        <li>
+                          <button>
+                            <img src='images/wishlist-icon.svg' alt='' />
+                          </button>
+                        </li>
+                        <li>
+                          <button>
+                            <img src='images/cart-icon.svg' alt='' />
+                          </button>
+                        </li>
+                        <li>
+                          <button>
+                            <img src='images/view-icon.svg' alt='' />
+                          </button>
+                        </li>
+                      </ul>
+                      <ul className='tag-list'>
+                        <li>
+                          <span>Sale</span>
+                        </li>
+                      </ul>
+                    </figure>
+                    <div className='course-txt'>
+                      <div className='training-txt'>
+                        {cource.category}{' '}
+                        <span>
+                          <i>
+                            <img src='images/rating-icon.svg' alt='' />
+                          </i>{' '}
+                          {cource.rating}
+                        </span>
+                      </div>
+                      <h3 className='card-title'>{cource.title}</h3>
+                      <p>{cource.description}</p>
+                      <div className='sales'>
+                        <i>
+                          <img src='images/download-icon.svg' alt='' />
+                        </i>{' '}
+                        {cource.sales} Sales
+                      </div>
+                      <div className='price'>
+                        ${cource.originalPrice}{' '}
+                        <span>${cource.originalPrice}</span>
+                      </div>
+                      <ul className='course-btn-wpr'>
+                        <li>
+                          <a href='#url'>
+                            Learn More{' '}
+                            <img src='images/arrow-icon.svg' alt='' />{' '}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

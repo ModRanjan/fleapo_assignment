@@ -1,0 +1,61 @@
+import { ICourse } from '@/typescript/interfaces/data.interface';
+import ASSEST from './assest';
+
+export const COURCES: ICourse[] = [
+  {
+    id: 1,
+    title: 'Video in Live Action',
+    description: 'We focus on ergonomics and meeting you...',
+    image: ASSEST.course1,
+    category: 'Training Courses',
+    rating: 4.9,
+    sales: 15,
+    originalPrice: 16.48,
+    discountedPrice: 6.48,
+  },
+  {
+    id: 2,
+    title: 'Most Popular Courses',
+    description: 'We focus on ergonomics and meeting you...',
+    image: ASSEST.course2,
+    category: 'Training Courses',
+    rating: 4.9,
+    sales: 15,
+    originalPrice: 16.48,
+    discountedPrice: 6.48,
+  },
+  {
+    id: 3,
+    title: 'Every Client Matters',
+    description: 'We focus on ergonomics and meeting you...',
+    image: ASSEST.course3,
+    category: 'Training Courses',
+    rating: 4.9,
+    sales: 15,
+    originalPrice: 16.48,
+    discountedPrice: 6.48,
+  },
+  {
+    id: 4,
+    title: 'Our Experts Teacher',
+    description: 'We focus on ergonomics and meeting you...',
+    image: ASSEST.course4,
+    category: 'Training Courses',
+    rating: 4.9,
+    sales: 15,
+    originalPrice: 16.48,
+    discountedPrice: 6.48,
+  },
+  // {
+  //   id: 5,
+  //   title: 'Every Client Matters',
+  //   description: 'We focus on ergonomics and meeting you...',
+  //   image: ASSEST.course4,
+  //   category: 'Training Courses',
+  //   rating: 4.9,
+  //   sales: 15,
+  //   originalPrice: 16.48,
+  //   discountedPrice: 6.48,
+  // },
+  // Add more courses as needed
+];
